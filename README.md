@@ -7,7 +7,7 @@ Augustus 2023
 # Contents
 
 
-Docker is een handig hulpmiddel waarmee je apps in zogenaamde"containers" kunt ontwikkelen, uitvoeren en delen. Dit maakt het gemakkelijker om je app te laten werken op verschillende computers, omdat alles wat nodig is voor de app in de containerzit.
+Docker is een handig hulpmiddel waarmee je apps in zogenaamde "containers" kunt ontwikkelen, uitvoeren en delen. Dit maakt het gemakkelijker om je app te laten werken op verschillende computers, omdat alles wat nodig is voor de app in de container zit.
 
 PHP en C\# zijn populaire programmeertalen die veel worden gebruikt voor het maken van websites en andere apps. In deze handleiding leer je hoe je Docker kunt gebruiken met PHP en C\#. Lees voor meer informatie over Docker en de mogelijkheden de volgende get-started handleiding: [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
 
@@ -58,7 +58,7 @@ Windows: [https://docs.docker.com/desktop/install/windows-install/](https://docs
 
 # Aan de slag met Docker enPHP
 
-1. Maak een nieuw bestand in de hoofdmap van je PHP project genaamd `Dockerfile` (dus zonder extensie) enopenhetinbijvoorbeeld PhpStorm.
+1. Maak een nieuw bestand in de hoofdmap van je PHP project genaamd `Dockerfile` (dus zonder extensie) en open het in bijvoorbeeld PhpStorm.
 2. Plak de volgende code in deDockerfile:
 
 ```Dockerfile
@@ -69,7 +69,7 @@ COPY . /var/www/html
 EXPOSE 80
 ```
 
-Deze code vertelt Docker om een container te maken met PHP 8.1 en Apache (een webserver) erin. Je app wordt gekopieerd naar de container en de container zal naar verzoeken luisteren op poort 80.
+Deze code vertelt Docker om een container te maken met PHP 8.2 en Apache (een webserver) erin. Je app wordt gekopieerd naar de container en de container zal naar verzoeken luisteren op poort 80.
 
 3. Klik rechts op Dockerfile en klik op `Run 'Dockerfile'`. Stel bij Image tag een zelf verzonnen image tag bijvoorbeeld: local/docker-test en klik bij sectie Run op `Modify` en selecteer `Bind ports` en `Bind mounts`. Zet bij `Bind ports` (Folder icoon) zoals onderstaande afbeelding zodat je het web-project straks op http://localhost:8080 kan bereiken. Zorg dat je niet per ongeluk een lege regel aanmaakt (klik op OK en niet op enter)!
 
