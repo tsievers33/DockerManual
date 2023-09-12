@@ -56,7 +56,7 @@ Mac: [https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.
 
 Windows: [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
 
-# Aan de slag met Docker enPHP
+# Aan de slag met Docker en PHP
 
 1. Maak een nieuw bestand in de hoofdmap van je PHP project genaamd `Dockerfile` (dus zonder extensie) en open het in bijvoorbeeld PhpStorm.
 2. Plak de volgende code in deDockerfile:
