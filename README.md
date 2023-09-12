@@ -11,7 +11,7 @@ Docker is een handig hulpmiddel waarmee je applicaties in zogenaamde "containers
 
 PHP en C\# zijn populaire programmeertalen die veel worden gebruikt voor het maken van websites en andere apps. In deze handleiding leer je hoe je Docker kunt gebruiken met PHP en C\#. Lees voor meer informatie over Docker en de mogelijkheden de volgende get-started handleiding: [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
 
-**Systeem setup benodigd voor Docker**
+## Systeem setup benodigd voor Docker
 
 **Virtualisatie**
 
