@@ -77,7 +77,7 @@ Deze code vertelt Docker om een container te maken met PHP 8.2 en Apache (een we
 
 4. Klik op `Bind mounts` op het Folder icoon en selecteer bij `Host path` de map van je webproject waar je index.php staat (vaak de hoofdmap van je project) en zet bij `Container path`: /var/www/html (zie onderstaande afbeelding). Dit doen we zodat de wijzigingen die je op je development maakt, direct zichtbaar zijn in de Docker Container zonder de Image opnieuw te bouwen. Zorg dat je niet per ongeluk een lege regel aanmaakt (klik op OK en niet op enter)!
 
-![image](https://github.com/tsievers33/DockerManual/assets/46933448/c47abc1e-b1fc-48fa-8c04-67c0064cb3ef)
+![image](https://github.com/tsievers33/DockerManual/assets/46933448/5dfc3092-3801-4b70-931b-ca7f516cc80f)
 Bind Mounts instellingen
 
 Zie onderstaand of je alles hebt ingevuld en klik op OK, mocht je dingen willen aanpassen, dan kun je op de Dockerfile rechts klikken \> `More Run/Debug` \> Modify Run Configuration…
