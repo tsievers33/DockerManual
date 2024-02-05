@@ -4,9 +4,17 @@ Tom Sievers
 
 Augustus 2023
 
+
+# Inhoudsopgave
+
+1. [Systeem setup benodigd voor Docker](#systeem-setup-benodigd-voor-docker)
+2. [Installatie WSL2](#installatie-wsl2)
+3. [Installatie Docker Desktop](#installatie-docker-desktop)
+4. [Aan de slag met Docker en PHP](#aan-de-slag-met-docker-en-php)
+5. [Aan de slag met Docker en C# .NET Core](#aan-de-slag-met-docker-en-c-net-core)
+6. [Conclusie](#conclusie)
+
 # Contents
-
-
 Docker is een handig hulpmiddel waarmee je applicaties in zogenaamde "containers" kunt ontwikkelen, uitvoeren en delen. Dit maakt het gemakkelijker om je applicatie te laten werken op verschillende computers, omdat alles wat nodig is voor de applicatie in de container zit.
 
 PHP en C\# zijn populaire programmeertalen die veel worden gebruikt voor het maken van websites en andere apps. In deze handleiding leer je hoe je Docker kunt gebruiken met PHP en C\#. Lees voor meer informatie over Docker en de mogelijkheden de volgende get-started handleiding: [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
@@ -91,6 +99,18 @@ Dockerfile Run settings
 
 # Aan de slag met Docker en C\# .NET Core
 
+## Docker en C# in Rider
+1. Maak een nieuwe solution aan in Rider. 
+2. Selecteer "ASP.NET Core Web Application"
+3. Selecteer vervolgens bij Docker support jouw OS type:
+   ![rider](https://github.com/tsievers33/DockerManual/assets/60046870/d655e09e-5127-4d20-8f50-c6fa86d90e1a)
+4. Vervolgens wordt je project aangemaakt met een Dockerfile die je als "launch configuration" kan selecteren:
+![rider2](https://github.com/tsievers33/DockerManual/assets/60046870/d336c172-355a-4758-a47a-bbe5450754c7)
+5. Klik vervolgens op de start knop en dan wordt er een Docker container gebouwd die beschikbaar is op: [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
+   ![rider3](https://github.com/tsievers33/DockerManual/assets/60046870/d875996a-e511-48ff-b950-cbd6cdc9b2a4)
+Om wijzigingen te updaten in de container kan je de container opnieuw starten als in stap 5.
+
+## Docker en C# in VSC
 1. Maak een nieuw bestand in de hoofdmap van je C\# project genaamd `Dockerfile` (zonder extensie) en open het in bijvoorbeeld Visual Studio.
 2. Plak de volgende code in de Dockerfile:
 
