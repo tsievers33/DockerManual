@@ -1,0 +1,82 @@
+# TODO: Lock image versions to specific Laravel versions
+version: '3.0'
+
+networks:
+  laravel:
+
+services:
+  nginx:
+    build:
+      context: ./dockerfiles
+      dockerfile: nginx.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - PROJECT_DIR=${PROJECT_DIR:-./src}
+        - NGINX_PORT=${NGINX_PORT:-80}
+    ports:
+      - "${NGINX_PORT:-8181}:80"
+    volumes:
+      - ${PROJECT_DIR:-./src}:/var/www/html:delegated
+    depends_on:
+      - php
+    networks:
+      - laravel
+
+  php:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.root.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - PROJECT_DIR=${PROJECT_DIR:-./src}
+    ports:
+      - "9000:9000"
+    volumes:
+      - ${PROJECT_DIR:-./src}:/var/www/html:delegated
+    networks:
+      - laravel
+
+  npm:
+    image: node:current-alpine
+    volumes:
+      - ${PROJECT_DIR:-./src}:/var/www/html
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "5173:5173"
+    working_dir: /var/www/html
+    entrypoint: [ 'npm' ]
+    networks:
+      - laravel
+
+  composer:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.root.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - PROJECT_DIR=${PROJECT_DIR:-./src}
+    volumes:
+      - ${PROJECT_DIR:-./src}:/var/www/html:delegated
+    depends_on:
+      - php
+    entrypoint: [ 'composer' ]
+    networks:
+      - laravel
+
+  artisan:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.root.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - PROJECT_DIR=${PROJECT_DIR:-./src}
+    volumes:
+      - ${PROJECT_DIR:-./src}:/var/www/html:delegated
+    entrypoint: [ 'php', '/var/www/html/artisan' ]
+    networks:
+      - laravel
