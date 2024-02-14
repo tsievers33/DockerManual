@@ -46,6 +46,20 @@ If you are planning on using Vite you need to add the following to the 'scripts'
 },
 ```
 
+And add the following to your ```vite.config.js``` file:
+```js
+    server: {
+        host: true,
+        port: 5173,
+        hmr: {
+            host: 'localhost',
+            watch: {
+                usePolling: true
+            },
+        }
+    }
+```
+
 After this is done asset compilations will be available with:
 ```bash
 docker-compose run --rm --service-ports npm run dev # Start development server
