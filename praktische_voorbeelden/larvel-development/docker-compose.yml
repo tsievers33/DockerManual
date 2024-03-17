@@ -1,0 +1,12 @@
+version: '3'
+services:
+    app:
+        image: # Image
+        container_name: laravel
+        restart: unless-stopped
+        ports:
+            # Adjust port as needed
+            - 8000:80
+            - 5173:5173
+        volumes:
+            - ${ENV_FILE}:/var/www/html/.env
