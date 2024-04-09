@@ -8,11 +8,9 @@ April 2023
 # Inhoudsopgave
 
 1. [Systeem setup benodigd voor Docker](#systeem-setup-benodigd-voor-docker)
-2. [Installatie WSL2](#installatie-wsl2)
-3. [Installatie Docker Desktop](#installatie-docker-desktop)
-4. [Aan de slag met Docker en PHP](#aan-de-slag-met-docker-en-php)
-5. [Aan de slag met Docker en C# .NET Core](#aan-de-slag-met-docker-en-c-net-core)
-6. [Conclusie](#conclusie)
+1. [Installatie WSL2](#installatie-wsl2)
+1. [Installatie Docker Desktop](#installatie-docker-desktop)
+1. [Conclusie](#conclusie)
 
 # Contents
 Docker is een handig hulpmiddel waarmee je applicaties in zogenaamde "containers" kunt ontwikkelen, uitvoeren en delen. Dit maakt het gemakkelijker om je applicatie te laten werken op verschillende computers, omdat alles wat nodig is voor de applicatie in de container zit.
