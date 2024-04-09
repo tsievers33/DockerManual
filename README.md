@@ -35,7 +35,7 @@ Als je weet hoe je in je EUFI komt kun je dit stukje overslaan en daar direct he
 2. Schakel de virtualisatie-instelling in. Dit doe je meestal door de instelling te selecteren en vervolgens Enter te drukken, of door met de pijltjestoetsen te navigeren.
 3. Nadat je de wijzigingen hebt aangebracht, vergeet dan niet om je BIOS/UEFI-instellingen op te slaan voordat je afsluit. Dit doe je meestal door naar het tabblad Exit te gaan en Save and Exit te selecteren, of door op F10 te drukken. Je computer zou dan opnieuw moeten opstarten met de nieuwe instellingen.
 
-## Installatie WSL2**
+## Installatie WSL2
 
 Voor Windows 10/11 is het eerst belangrijk om WSL2 in te schakelen, als je dit al hebt of je hebt een ander besturingssysteem, dan kun je dit stuk overslaan.
 
