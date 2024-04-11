@@ -1,22 +1,20 @@
 # Docker Handleiding
-
-Tom Sievers
-
-April 2023
-
-
-# Inhoudsopgave
-
-1. [Systeem setup benodigd voor Docker](#systeem-setup-benodigd-voor-docker)
-1. [Installatie WSL2](#installatie-wsl2)
-1. [Installatie Docker Desktop](#installatie-docker-desktop)
-1. [Conclusie](#conclusie)
-
-# Contents
 Docker is een handig hulpmiddel waarmee je applicaties in zogenaamde "containers" kunt ontwikkelen, uitvoeren en delen. Dit maakt het gemakkelijker om je applicatie te laten werken op verschillende computers, omdat alles wat nodig is voor de applicatie in de container zit.
 
 PHP en C\# zijn populaire programmeertalen die veel worden gebruikt voor het maken van websites en andere apps. In deze handleiding leer je hoe je Docker kunt gebruiken met PHP en C\#. Lees voor meer informatie over Docker en de mogelijkheden de volgende get-started handleiding: [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
 
+# Inhoudsopgave
+
+
+1. [Windows](#windows)
+    1. [Systeem setup benodigd voor Docker](#systeem-setup-benodigd-voor-docker)
+    1. [Installatie WSL2](#installatie-wsl2)
+    1. [Installatie Docker Desktop](#installatie-docker-desktop)
+1. [MacOS](#macos)
+    1. [Intel]
+1. [Conclusie](#conclusie)
+
+# Windows
 ## Systeem setup benodigd voor Docker
 
 **Virtualisatie**
@@ -58,11 +56,24 @@ Als de setup van het systeem gelukt is ga dan verder met het installeren van Doc
 
 Linux: [https://docs.docker.com/desktop/install/linux-install/](https://docs.docker.com/desktop/install/linux-install/)
 
-Mac: [https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.com/desktop/install/mac-install/)
-
 Windows: [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
 
+# MacOS
 
-## Conclusie
+Voor de installatie van Docker Desktop op MacOS ga je naar [https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.com/desktop/install/mac-install/)
+
+## Mac with Apple silicon
+Mocht je een nieuwe Mac gebruiken met een zogeheten "Apple silicon", ook wel M1,M2 of M3 (pro/max/ultra). Deze chips maken gebruik van een zogeheten [ARM64](https://www.geeksforgeeks.org/arm-processor-and-its-features/) architectuur ipv de x86 architectuur van Intel chips. 
+
+Niet alle applicaties zijn ontwikkeld om op deze ARM architectuur uitgevoerd te kunnen worden. Daar heeft Apple voor hun silicons iets voor bedacht genaamd [Rosetta](https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-environment)
+
+Docker op MacOS werkt zonder Rosetta hierdoor kan je applicatie optimaal gebruik maken van de [performance](https://developer.apple.com/documentation/apple-silicon/tuning-your-code-s-performance-for-apple-silicon) van de Apple silicon chip. Echter zijn er wel onderdelen van docker of bepaalde images die ARM64 niet ondersteuneun (Zie [Docker Known issues](https://docs.docker.com/desktop/troubleshoot/known-issues/))
+
+**De installatie van Rosetta is dus optioneel maar wel aan te raden!**
+Dit doe je door in je terminal het volgende commando uit tevoeren
+`softwareupdate --install-rosetta`
+
+
+# Conclusie
 
 Je hebt nu geleerd hoe je Docker kunt gebruiken op Windows, MacOS en Linux. Door Docker te combineren met deze programmeertalen, kun je gemakkelijker apps maken die op verschillende computers werken, wat handig is voor samenwerking en het delen van je werk. Je kan de Docker Images die je hebt gemaakt ook nog pushen naar de Docker Hub. Lees voor meer informatie over Docker de volgende get-started handleiding: [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
